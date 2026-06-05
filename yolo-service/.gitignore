@@ -1,0 +1,27 @@
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache and tooling
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+.python-version
+
+# Local environment files
+.env
+!.env.example
+
+# Model artifacts
+app/models/*.pt
+app/models/*.onnx
+app/models/*.engine
+!app/models/.gitkeep

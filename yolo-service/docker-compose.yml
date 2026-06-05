@@ -1,0 +1,14 @@
+services:
+  yolo-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: yolo-service
+    env_file:
+      - .env
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./app/uploads:/app/app/uploads
+      - ./app/results:/app/app/results
+      - ./app/models:/app/app/models
