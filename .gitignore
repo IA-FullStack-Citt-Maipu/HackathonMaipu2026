@@ -13,6 +13,7 @@ venv/
 env/
 backend/.venv/
 backend/.env
+backend/.env.docker
 
 frontend/node_modules/
 frontend/dist/
@@ -22,3 +23,14 @@ frontend/build/
 .vscode/
 .DS_Store
 Thumbs.db
+
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+terraform.tfvars
+*.auto.tfvars

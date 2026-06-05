@@ -131,6 +131,11 @@ def list_spaces(db: Session) -> list[ParkingSpace]:
 
 
 def get_occupancy_summary(db: Session) -> OccupancySummary:
+    refresh_sugerido = get_parameter_value(
+        db,
+        "ocupacion_refresco_segundos",
+        "30",
+    )
     total_espacios = db.scalar(
         select(func.count()).select_from(ParkingSpace).where(ParkingSpace.activo.is_(True))
     ) or 0
@@ -406,9 +411,4 @@ def register_vehicle_exit(db: Session, payload: VehicleExitCreate) -> VehicleExi
         fecha_salida=occupancy.fecha_salida,
         estado="finalizada",
         espacio_liberado=space_code,
-    )
-    refresh_sugerido = get_parameter_value(
-        db,
-        "ocupacion_refresco_segundos",
-        "30",
     )

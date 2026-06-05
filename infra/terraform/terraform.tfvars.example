@@ -1,0 +1,7 @@
+backend_database_url = "postgresql://usuario:password@host:5432/postgres?sslmode=require"
+
+enable_yolo_service = true
+
+backend_port  = 8000
+frontend_port = 5173
+yolo_port     = 8001
