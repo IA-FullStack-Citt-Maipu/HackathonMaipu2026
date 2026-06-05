@@ -1,0 +1,34 @@
+{
+  "zones": [
+    {
+      "id": 1,
+      "name": "pasillo_izquierdo_lateral",
+      "type": "flow",
+      "points": [[0, 12], [52, 12], [52, 394], [0, 394]]
+    },
+    {
+      "id": 2,
+      "name": "pasillo_central",
+      "type": "flow",
+      "points": [[236, 12], [276, 12], [276, 394], [236, 394]]
+    },
+    {
+      "id": 3,
+      "name": "pasillo_derecho",
+      "type": "flow",
+      "points": [[448, 12], [486, 12], [486, 394], [448, 394]]
+    },
+    {
+      "id": 4,
+      "name": "pasillo_derecho_lateral",
+      "type": "flow",
+      "points": [[580, 12], [612, 12], [612, 330], [580, 330]]
+    },
+    {
+      "id": 5,
+      "name": "salida_inferior",
+      "type": "exit",
+      "points": [[24, 370], [588, 370], [588, 406], [24, 406]]
+    }
+  ]
+}
