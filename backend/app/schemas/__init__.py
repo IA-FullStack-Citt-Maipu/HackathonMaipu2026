@@ -1,1 +1,41 @@
+from app.schemas.catalog import (
+    ParkingSpaceCreate,
+    ParkingSpaceRead,
+    RoleCreate,
+    RoleRead,
+    UserCreate,
+    UserRead,
+    VehicleCreate,
+    VehicleRead,
+)
+from app.schemas.operations import (
+    OccupancyCurrentItem,
+    OccupancyRead,
+    OccupancySummary,
+    SystemParameterRead,
+    SystemParameterUpsert,
+    VehicleExitCreate,
+    VehicleExitRead,
+    VehicleIngressCreate,
+    VehicleLocationRead,
+)
 
+__all__ = [
+    "OccupancyCurrentItem",
+    "OccupancyRead",
+    "OccupancySummary",
+    "ParkingSpaceCreate",
+    "ParkingSpaceRead",
+    "RoleCreate",
+    "RoleRead",
+    "SystemParameterRead",
+    "SystemParameterUpsert",
+    "UserCreate",
+    "UserRead",
+    "VehicleCreate",
+    "VehicleExitCreate",
+    "VehicleExitRead",
+    "VehicleIngressCreate",
+    "VehicleLocationRead",
+    "VehicleRead",
+]

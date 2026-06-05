@@ -1,13 +1,25 @@
+import logging
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 
 from app.api.router import api_router
 from app.core.config import settings
+from app.db.session import init_db
+from app.services.system_parameter_service import seed_default_parameters
+
+logger = logging.getLogger(__name__)
 
 
 @asynccontextmanager
-async def lifespan(_: FastAPI):
+async def lifespan(app: FastAPI):
+    app.state.db_startup_error = None
+    try:
+        init_db()
+        seed_default_parameters()
+    except RuntimeError as exc:
+        app.state.db_startup_error = str(exc)
+        logger.warning("Database startup initialization failed: %s", exc)
     yield
 
 
